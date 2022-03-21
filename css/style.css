@@ -4,14 +4,13 @@
   padding: 0;
   box-sizing: border-box;
 }
-.intro-page {
-  position: relative;
-}
-.intro-img {
+
+body {
   background: url("../images/pizzabg1.jpg");
   background-size: cover;
-
-  height: 80vh;
+  position: relative;
+  height: 150vh;
+  background-repeat: no-repeat;
 }
 .intro-logo {
   position: absolute;
@@ -38,4 +37,10 @@
   top: 350px;
   left: 220px;
   font-family: "Dancing Script", cursive;
+}
+
+#makeorder{
+  padding-top: 600px;
+  align-items: center;
+  align-content: center;
 }
