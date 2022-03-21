@@ -1,0 +1,25 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap');
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.intro-page{
+    position: relative;
+}
+.intro-img {
+  background: url("../images/pizzabg1.jpg");
+  background-size: cover;
+  filter: blur(2px);
+  
+
+  height: 80vh;
+}
+.intro-page h1{
+    color: #fff;
+    font-family:'Dancing Script', cursive;
+    position: absolute;
+    top: 50px;
+    justify-content: left ;
+
+}
