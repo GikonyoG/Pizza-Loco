@@ -10,7 +10,7 @@
 .intro-img {
   background: url("../images/pizzabg1.jpg");
   background-size: cover;
-  filter: blur(2px);
+  /* filter: blur(2px); */
   
 
   height: 80vh;
