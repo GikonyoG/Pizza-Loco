@@ -25,6 +25,7 @@ body {
   font-family: "Dancing Script", cursive;
   position: absolute;
   top: 200px;
+  padding-left: 20px;
 }
 .intro-text h1 {
   font-size: 50px;
