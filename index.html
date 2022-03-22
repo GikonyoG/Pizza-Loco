@@ -33,7 +33,7 @@
 
     <!-- make order -->
 
-    <div class="container" id="makeorder">
+    <form class="container" id="makeorder">
       <div class="row">
         <div class="col-12 col-md-6 col-lg-4">
           <div class="card" style="width: 18rem">
@@ -48,23 +48,12 @@
               <h5 class="card-title">SIZE</h5>
               <p class="card-text">PLEASE SELECT THE SIZE</p>
             </div>
-            <div class="dropdown">
-              <button
-                class="btn btn-secondary dropdown-toggle"
-                type="button"
-                id="dropdownMenuButton1"
-                data-bs-toggle="dropdown"
-                aria-expanded="false"
-              >
-                Size
-              </button>
-              <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-                <li><a class="dropdown-item" id="small" value="500" href="#">Small - Ksh 500</a></li>
-                <li><a class="dropdown-item" id="medium" value="700" href="#">Medium - Ksh 700</a></li>
-                <li>
-                  <a class="dropdown-item" id="large"value="950" href="#">Large - Ksh 950</a>
-                </li>
-              </ul>
+            <div class="size">
+              <select name="size" id="pizzaSize">
+                <option value="500">Small - Ksh 500</option>
+                <option value="700">Medium - Ksh 700</option>
+                <option value="1000">Large - Ksh 1000</option>
+              </select>
             </div>
           </div>
         </div>
@@ -81,23 +70,29 @@
               <h5 class="card-title">TOPPINGS</h5>
               <p class="card-text">PLEASE SELECT THE TOPPINGS</p>
             </div>
-            <div class="dropdown">
-              <button
-                class="btn btn-secondary dropdown-toggle"
-                type="button"
-                id="dropdownMenuButton1"
-                data-bs-toggle="dropdown"
-                aria-expanded="false"
-              >
-                Toppings
-              </button>
-              <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-                <li><a class="dropdown-item" id="pepperoni" value="50" href="#">Pepperoni - Ksh 50</a></li>
-                <li><a class="dropdown-item" id="black-olives" value="70" href="#">Black Olives -Ksh 70</a></li>
-                <li>
-                  <a class="dropdown-item" id="bacon" value="100" href="#">Bacon - Ksh 100</a>
-                </li>
-              </ul>
+            <div class="toppings">
+              <div class="pepperoni">
+                <input
+                  type="checkbox"
+                  id="pepperoni"
+                  name="toppings"
+                  value="50"
+                />
+                <label for="pepperoni">Pepperoni - Ksh 50</label>
+              </div>
+              <div class="black-olives">
+                <input
+                  type="checkbox"
+                  id="blackOlives"
+                  name="toppings"
+                  value="70"
+                />
+                <label for="blackOlives">Black Olives - Ksh 70</label>
+              </div>
+              <div class="bacon">
+                <input type="checkbox" id="bacon" name="toppings" value="100" />
+                <label for="bacon">Bacon - Ksh 100</label>
+              </div>
             </div>
           </div>
         </div>
@@ -114,23 +109,13 @@
               <h5 class="card-title">CRUST</h5>
               <p class="card-text">PLEASE SELECT THE CRUST.</p>
             </div>
-            <div class="dropdown">
-              <button
-                class="btn btn-secondary dropdown-toggle"
-                type="button"
-                id="dropdownMenuButton1"
-                data-bs-toggle="dropdown"
-                aria-expanded="false"
-              >
-                Crust
-              </button>
-              <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-                <li><a class="dropdown-item" id="crispy"value="100" href="#">Crispy - Ksh 100</a></li>
-                <li><a class="dropdown-item" id="stuffed" value="200" href="#">Stuffed - Ksh 200</a></li>
-                <li>
-                  <a class="dropdown-item" id="gluten-free" value="300" href="#">Gluten-free - Ksh 300</a>
-                </li>
-              </ul>
+
+            <div class="crust">
+              <select name="crust" id="pizzaCrust">
+                <option value="100">Crispy - Ksh 100</option>
+                <option value="200">Stuffed - Ksh 200</option>
+                <option value="300">Gluten-free - Ksh 300</option>
+              </select>
             </div>
           </div>
         </div>
@@ -142,7 +127,6 @@
           class="btn-group btn-md"
           role="group"
           aria-label="Basic radio toggle button group"
-          
         >
           <input
             type="radio"
@@ -164,7 +148,7 @@
           <label class="btn btn-outline-light" for="btnradio2">NO</label>
         </div>
       </div>
-      <div class="submit-order pt-5  text-center">
+      <div class="submit-order pt-5 text-center">
         <div
           class="btn-group"
           role="group"
@@ -178,10 +162,13 @@
             autocomplete="off"
             checked
           />
-          <label class="btn btn-outline-light" for="btnradio1">SUBMIT ORDER</label>
+       
         </div>
       </div>
-    </div>
+         <button id="submit" class="btn btn-outline-light" type="submit"
+            >SUBMIT ORDER</button
+          >
+    </form>
 
     <script src="./js/script.js"></script>
     <script
