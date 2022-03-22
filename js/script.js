@@ -4,17 +4,24 @@ const pizzaSize = document.getElementById("pizzaSize");
 const pepperoni = document.getElementById("pepperoni");
 const blackOlives = document.getElementById("blackOlives");
 const pizzaCrust = document.getElementById("pizzaCrust");
+var grandPizza = document.getElementById("#grandPizza");
 // const stuffed = document.getElementById("stuffed");
 // const glutenFree = document.getElementById("gluten-free");
-var size, crust;
+var size, crust, sizeTag, crustTag;
 
-toppings = 0;
-total = 0;
+var toppingsTag = "";
+var toppings = 0;
+var total = 0;
+var grandTotal = 0;
 
 $(function () {
-  $("#submit").on("click", function (event) {
+  $("#addPizza").on("click", function (event) {
     event.preventDefault();
     size = parseInt(pizzaSize.value);
+    sizeTag = pizzaSize.options[pizzaSize.selectedIndex].text;
+    toppingsTag = document.querySelector("input[name='toppings']:checked").id;
+    crustTag = pizzaCrust.options[pizzaCrust.selectedIndex].text;
+    console.log(toppingsTag);
 
     crust = parseInt(pizzaCrust.value);
 
@@ -33,6 +40,23 @@ $(function () {
     }
     total = size + crust + toppings;
     console.log(total);
-    return total;
+    function addPizza(size, crust, toppings, total) {
+      this.size = size;
+      this.crust = crust;
+      this.toppings = toppings;
+      this.total = total;
+    }
+    var newPizza = new addPizza(size, crust, toppings, total);
+    var toppingsChoice = newPizza.toppings;
+    var totalChoice = newPizza.total;
+
+    var newOrder = `<p>${sizeTag}</p> <p>${crustTag}</p> <p>${toppingsTag}<span> Ksh ${toppingsChoice}</span></p> <p>Total <span> Ksh ${totalChoice}</span></p> `;
+    const pizzaList = document.querySelector("#pizzaList");
+    pizzaList.insertAdjacentHTML("afterbegin", newOrder);
+
+    grandTotal = grandTotal + total;
+
+    document.getElementById("grandPizza").innerHTML =
+      "The Grand Total is " + grandTotal;
   });
 });
