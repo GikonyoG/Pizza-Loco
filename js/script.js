@@ -19,7 +19,7 @@ $(function () {
     event.preventDefault();
     size = parseInt(pizzaSize.value);
     sizeTag = pizzaSize.options[pizzaSize.selectedIndex].text;
-    toppingsTag = document.querySelector("input[name='toppings']:checked").id;
+    // toppingsTag = document.querySelector("input[name='toppings']:checked").id;
     crustTag = pizzaCrust.options[pizzaCrust.selectedIndex].text;
     console.log(toppingsTag);
 
@@ -60,3 +60,4 @@ $(function () {
       "The Grand Total is " + grandTotal;
   });
 });
+
