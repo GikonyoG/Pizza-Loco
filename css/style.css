@@ -50,9 +50,24 @@ body {
   border-radius: 20px;
   
 }
-#pizzacrust
+
 .delivery{
     color: #fff;
     font-size: 20px;
+}
+#addPizza{
+    position: absolute;
+    left: 45%;
+    top: 70%;
+    background-color: #fff;
+    color: black;
+}
+#grandPizza{
+    color: #fff;
+    position: absolute;
+    top: 80%;
+    left: 40%;
+    text-transform: uppercase;
+
 }
 

@@ -50,9 +50,9 @@ $(function () {
     var toppingsChoice = newPizza.toppings;
     var totalChoice = newPizza.total;
 
-    var newOrder = `<p>${sizeTag}</p> <p>${crustTag}</p> <p>${toppingsTag}<span> Ksh ${toppingsChoice}</span></p> <p>Total <span> Ksh ${totalChoice}</span></p> `;
-    const pizzaList = document.querySelector("#pizzaList");
-    pizzaList.insertAdjacentHTML("afterbegin", newOrder);
+    // var newOrder = `<p>${sizeTag}</p> <p>${crustTag}</p> <p>${toppingsTag}<span> Ksh ${toppingsChoice}</span></p> <p>Total <span> Ksh ${totalChoice}</span></p> `;
+    // const pizzaList = document.querySelector("#pizzaList");
+    // pizzaList.insertAdjacentHTML("afterbegin", newOrder);
 
     grandTotal = grandTotal + total;
 
