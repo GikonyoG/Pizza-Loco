@@ -34,12 +34,7 @@ body {
   text-align: center;
   font-size: 30px;
 }
-.btn-light {
-  position: absolute;
-  top: 350px;
-  left: 220px;
-  font-family: "Dancing Script", cursive;
-}
+
 
 #makeorder {
   position: absolute;
