@@ -18,7 +18,7 @@ Get the best pizza in town by ordering through our website
 3.Calculating the total when delivery is added
 
 <h1>Links</h1>
-Available links to <a href="" >WEBSITE</a> and <a href="https://github.com/GikonyoG/Pizza-loco/blob/develop/LICENSE" >LICENSE</a>
+Available links to <a href="https://gikonyog.github.io/Pizza-loco/" >WEBSITE</a> and <a href="https://github.com/GikonyoG/Pizza-loco/blob/develop/LICENSE" >LICENSE</a>
 
 
 
